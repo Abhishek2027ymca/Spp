@@ -4,6 +4,7 @@ import { Link }  from 'react-router';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { IntroSection } from './IntroSection';
 import { WhatWeDoSection} from './WhatWeDoSection'
+import { QuotationSection } from './QuotationSection';
 export function Hero() {
   return (
     <div className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50">
@@ -99,13 +100,13 @@ export function Hero() {
               transition={{ delay: 0.8, duration: 0.5 }}
               className="mt-8 pt-8 border-t border-gray-200"
             >
-              <div className="grid grid-cols-2 gap-4 text-lg">
-                <div>
+              <div className="grid grid-cols-2 gap-4 text-lg font-semibold">
+                <div >
                   <p className="text-black-500 mb-1 text-lg">Phone</p>
                   <p className="text-blue-900">9419311049</p>
                 </div>
-                <div>
-                  <p className="text-black mb-1">Office</p>
+                <div >
+                  <p className="text-black mb-1 ">Office</p>
                   <p className="text-blue-900">01923-293170</p>
                 </div>
               </div>
@@ -156,6 +157,10 @@ export function Hero() {
         </div>
         <div>
           <WhatWeDoSection/>
+        </div>
+        <br />
+        <div>
+          <QuotationSection/>
         </div>
       </div>
     </div>

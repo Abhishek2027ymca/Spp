@@ -99,7 +99,7 @@ export function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm mb-4">
+          <span className="inline-block bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-md mb-4">
             Our Services
           </span>
           <h2 className="text-4xl lg:text-5xl text-blue-900 mb-4">

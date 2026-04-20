@@ -45,7 +45,7 @@ export function WhatWeDoSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <p className="text-orange-500 font-semibold text-md tracking-widest uppercase mb-3">
+          <p className="text-orange-600 font-semibold text-lg tracking-widest uppercase mb-3">
             Our Services
           </p>
           <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-4">
@@ -63,8 +63,8 @@ export function WhatWeDoSection() {
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
+              transition={{ duration: 0.9, delay: index * 0.1 }}
+              className="group bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col border-orange-200 border-2"
             >
               {/* Image */}
               <div className="overflow-hidden h-52">
@@ -80,7 +80,7 @@ export function WhatWeDoSection() {
                 <h3 className="text-xl font-bold text-blue-900 mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed flex-1">
+                <p className="text-black-500 text-md leading-relaxed flex-1">
                   {service.description}
                 </p>
 
@@ -91,7 +91,7 @@ export function WhatWeDoSection() {
                     className="bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110 group/arrow"
                     aria-label={`Learn more about ${service.title}`}
                   >
-                    <ArrowRight className="size-4 transition-transform duration-300 group-hover/arrow:translate-x-0.5" />
+                    <ArrowRight className="size-6 transition-transform duration-300 group-hover/arrow:translate-x-0.5" />
                   </Link>
                 </div>
               </div>
