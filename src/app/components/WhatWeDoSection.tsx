@@ -35,7 +35,7 @@ export function WhatWeDoSection() {
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
   return (
-    <div ref={ref} className="py-20 lg:py-32 bg-orange-50 overflow-hidden " >
+    <div ref={ref} className="py-20 lg:py-32 bg-orange-50 overflow-hidden  border-orange-200 rounded-2xl" >
       <div className="container mx-auto px-4">
 
         {/* Header */}
@@ -64,7 +64,7 @@ export function WhatWeDoSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.9, delay: index * 0.1 }}
-              className="group bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col border-orange-200 border-2"
+              className="group bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col border-orange-100 border-2"
             >
               {/* Image */}
               <div className="overflow-hidden h-52">

@@ -20,7 +20,7 @@ export function IntroSection() {
             className="relative flex justify-center"
           >
             {/* Decorative background block */}
-            <div className="absolute top-4 left-4 w-full h-full bg-orange-100  rounded-2xl border-2 border-amber-100 opacity-36"  />
+            <div className="absolute top-4 left-4 w-full h-full bg-orange-100  rounded-2xl border-2 border-amber-100 opacity-22"  />
 
             {/* Main photo */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-md">
@@ -33,15 +33,59 @@ export function IntroSection() {
             </div>
 
             {/* Floating badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="absolute -bottom-5 right-4 lg:-right-6 bg-orange-400 text-white px-6 py-4 rounded-xl shadow-xl border-white border-1"
-            >
-              <p className="text-3xl font-bold leading-none ">15+</p>
-              <p className="text-sm mt-1 opacity-90">Years of Trust</p>
-            </motion.div>
+{/* Bottom badge — Years of Trust */}
+<motion.div
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+  transition={{ duration: 0.5, delay: 0.6 }}
+  className="absolute -bottom-5 right-2 lg:-right-6 overflow-hidden rounded-xl shadow-2xl border border-white/30"
+>
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage: `url('https://images.unsplash.com/photo-1616964666162-31f61986d9aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=300')`,
+    }}
+  />
+  <div className="absolute inset-0 bg-gradient-to-br from-orange-200/90 to-orange-700/90 border-2 border-white/30" />
+  <div className="relative z-10 px-6 py-4 flex items-center gap-3">
+    <div className="bg-white/20 backdrop-blur-sm p-2 rounded-lg">
+      <svg className="size-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </div>
+    <div>
+      <p className="text-3xl font-bold text-white leading-none">15+</p>
+      <p className="text-sm text-orange-100 mt-0.5 tracking-wide">Years of Trust</p>
+    </div>
+  </div>
+</motion.div>
+
+{/* Top badge — Projects Completed */}
+<motion.div
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+  transition={{ duration: 0.5, delay: 0.8 }}
+  className="absolute -top-5 left-3 lg:-left-6 overflow-hidden rounded-xl shadow-2xl border-4 border-white/20"
+>
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage: `url('https://images.unsplash.com/photo-1695634621145-9133286e0247?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=300')`,
+    }}
+  />
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-blue-300/90" />
+  <div className="relative z-10 px-6 py-4 flex items-center gap-3">
+    <div className="bg-white/20 backdrop-blur-sm p-2 rounded-lg">
+      <svg className="size-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+      </svg>
+    </div>
+    <div>
+      <p className="text-2xl font-bold text-white leading-none">50K+</p>
+      <p className="text-sm text-blue-200 mt-0.5 tracking-wide">Projects Done</p>
+    </div>
+  </div>
+</motion.div>
           </motion.div>
 
           {/* RIGHT — Text content */}

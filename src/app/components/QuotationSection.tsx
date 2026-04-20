@@ -15,7 +15,7 @@ export function QuotationSection() {
   ];
 
   return (
-    <section className="relative py-16 lg:py-20 overflow-hidden">
+    <section className="relative py-16 lg:py-20 overflow-hidden border-2 border-blue-900 rounded-xl" >
       {/* Background */}
       <div className="absolute inset-0">
         <div

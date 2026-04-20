@@ -130,26 +130,36 @@ export function Hero() {
             </div>
 
             {/* Floating Cards */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.5 }}
-              className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border-2 border-gray-400"
-            >
-              <div className="flex items-center gap-4 ">
-                <div className="bg-orange-100 p-3 rounded-lg">
-                  <svg className="size-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-2xl text-blue-900">5000+</p>
-                  <p className="text-sm text-gray-600">Happy Clients</p>
-                </div>
+ <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 1, duration: 0.5 }}
+  className="absolute -bottom-6 -left-6 overflow-hidden rounded-xl shadow-2xl border border-white/20"
+  style={{ width: '200px' }}
+>
+  {/* Background image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage: `url('https://images.unsplash.com/photo-1495846111602-a16f6a1ede09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400')`,
+    }}
+  />
+  {/* Dark gradient overlay — same style as main image */}
+  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/50 to-blue-900/20" />
 
-              </div>
-
-            </motion.div>
+  {/* Content */}
+  <div className="relative z-10 p-5 flex items-center gap-3 border-2 border-white/30 bg-white/10 backdrop-blur-sm rounded-lg">
+    <div className="bg-orange-500/90 backdrop-blur-sm p-2.5 rounded-lg flex-shrink-0">
+      <svg className="size-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </div>
+    <div>
+      <p className="text-2xl font-bold text-white leading-none">5000+</p>
+      <p className="text-xs text-blue-200 mt-0.5">Happy Clients</p>
+    </div>
+  </div>
+</motion.div>
           </motion.div>
         </div>
         <div>
@@ -161,6 +171,7 @@ export function Hero() {
         <br />
         <div>
           <QuotationSection/>
+          <br />
         </div>
       </div>
     </div>
