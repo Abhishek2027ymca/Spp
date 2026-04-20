@@ -48,7 +48,7 @@ export function Header() {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-         <img src="./logo.png" alt="Logo" /> 
+         <img src="./l.png" alt="Logo" /> 
             <div className="bg-gradient-to-br">
               {/* <Printer className="size-5 text-white" /> */}
             </div>
