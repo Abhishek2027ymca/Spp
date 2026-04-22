@@ -1,7 +1,7 @@
 import { Phone, MessageCircle, Mail } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link }  from 'react-router';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { IntroSection } from './IntroSection';
 import { WhatWeDoSection} from './WhatWeDoSection'
 import { QuotationSection } from './QuotationSection';

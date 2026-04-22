@@ -1,5 +1,5 @@
-import { Hero } from '../components/Hero';
-import { IntroSection } from '../components/IntroSection';
+import { Hero } from '../components/homepage/Hero';
+import { IntroSection } from '../components/homepage/IntroSection';
 
 export function Home() {
   return (

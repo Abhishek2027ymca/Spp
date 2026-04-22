@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
-import { useInView } from './hooks/useInView';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { useInView } from '../hooks/useInView';
+import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { ArrowRight } from 'lucide-react';
 
 export function IntroSection() {
